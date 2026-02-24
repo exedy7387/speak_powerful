@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>パワフル音声再生</title>
+        <link rel="stylesheet" href="./static/style.css" />
+
+        <!-- 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" /> -->
+    </head>
+    <body>
+        <header class="header" id="header">
+            <div id="company-logo">
+                <img src="./static/image/logo1.png" alt="neibo_logo" />
+            </div>
+            <div id="current-time"></div>
+            <div id="mode-badge">パワフル</div>
+        </header>
+
+        <main id="mainContent">
+            <div class="control-grid">
+                <!-- <div class="grid-3cols"> -->
+                <!-- <button class="control-button play-button pos-intro" data-label="自己紹介" data-media-id="556ca3be-86c7-426d-8bbb-3989025b80fe">
+                        <span class="title">①</span>
+                        <span class="subtitle">やっほー！ぼくの名前はネイボ！警察ヒーローロボットやで！...</span>
+                    </button> -->
+                <div class="grid-4cols">
+                    <button class="control-button play-button pos-intro" data-label="①" data-media-id="8b1a0552-b085-4a1c-9c20-83760bf42fb2">
+                        <span class="title">①</span>
+                    </button>
+                    <button class="control-button play-button pos-q1" data-label="②" data-media-id="15e73208-5758-4d30-974f-4dca9b5803ad">
+                        <span class="title">②</span>
+                    </button>
+                    <button class="control-button play-button pos-q2" data-label="③" data-media-id="e3d34c25-52d9-4306-965f-2030f25f497a">
+                        <span class="title">③</span>
+                    </button>
+                    <button class="control-button play-button pos-q3" data-label="④" data-media-id="91668c04-d63d-4916-91fc-8366c7b4874c">
+                        <span class="title">④</span>
+                    </button>
+                </div>
+                <div class="grid-4cols">
+                    <button class="control-button play-button pos-q4" data-label="⑤" data-media-id="0d4f38cd-9cc2-4603-bafa-dd7a1f08abdf">
+                        <span class="title">⑤</span>
+                    </button>
+                    <button class="control-button play-button pos-last" data-label="⑥" data-media-id="e7a24aef-a7aa-408c-bc99-e8825e54b592">
+                        <span class="title">⑥</span>
+                    </button>
+                    <button class="control-button play-button pos-last" data-label="⑦" data-media-id="8299b39d-813a-4ed2-9f4c-a93bfaf69cd9">
+                        <span class="title">⑦</span>
+                    </button>
+                    <button class="control-button play-button pos-q4" data-label="⑧" data-media-id="a11e8386-1109-4555-a0bd-b0c9fa30d845">
+                        <span class="title">⑧</span>
+                    </button>
+                </div>
+                <div class="grid-4cols">
+                    <button class="control-button play-button pos-last" data-label="⑨" data-media-id="099e32b9-47b8-4f53-b330-e63f817c6e39">
+                        <span class="title">⑨</span>
+                    </button>
+                    <button class="control-button play-button pos-last" data-label="⑩" data-media-id="a0e98720-4316-4dbc-9c10-510d5785fd39">
+                        <span class="title">⑩</span>
+                    </button>
+                    <button class="control-button play-button pos-last" data-label="⑪" data-media-id="fa23b67f-0fd8-4b04-b45f-81428b977a19">
+                        <span class="title">⑪</span>
+                    </button>
+                    <button class="control-button play-button pos-last" data-label="⑫" data-media-id="fa23b67f-0fd8-4b04-b45f-81428b977a19">
+                        <span class="title">⑫</span>
+                    </button>
+                </div>
+
+                <button class="stop-button pos-stop">再生停止</button>
+                <div class="mode-row">
+                    <!-- <button class="control-button mode-button pos-sad" data-mode="sad_image" data-label="悲しい" data-media-id="660a3a50-097b-460a-8ece-fa737483bbd1">
+                        <span class="title">悲しい</span>
+                    </button> -->
+                    <button class="control-button mode-button pos-heart-eye" data-mode="heart_eye"><span class="title">目♥</span></button>
+                    <!-- <button class="control-button mode-button pos-heart-img" data-mode="heart_image" data-label="画像♥" data-media-id="4a01a6a9-a90d-4da8-9fb8-70ac19153acd">
+                        <span class="title">画像♥</span>
+                    </button> -->
+                    <button class="control-button mode-button pos-normal" data-mode="normal"><span class="title">通常</span></button>
+                </div>
+            </div>
+        </main>
+
+        <div id="mediaConfigPopup" class="popup-overlay" style="display: none">
+            <div class="popup-panel">
+                <h2>メディア設定</h2>
+                <div id="mediaConfigList" class="popup-list"></div>
+
+                <div class="popup-actions">
+                    <button id="mediaConfigCancel" class="popup-btn">キャンセル</button>
+                    <button id="mediaConfigSave" class="popup-btn primary">保存</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="./static/module/api.js"></script>
+        <script src="./static/module/function.js"></script>
+        <script src="./static/script.js"></script>
+    </body>
+</html>
